@@ -147,7 +147,7 @@ const BackgroundSelector = ({
                 <label
                   key={index}
                   className={`relative cursor-pointer rounded-lg border-2 transition-all flex flex-col items-center p-2 ${
-                    selectedImage === `/src/assets/${index + 1}.jpg`
+                    selectedImage === `/assets/${index + 1}.jpg`
                       ? 'border-blue-500 bg-blue-50'
                       : `${theme.border} ${theme.button}`
                   }`}
@@ -157,12 +157,12 @@ const BackgroundSelector = ({
                   <input
                     type="radio"
                     name="asset-image"
-                    checked={selectedImage === `/src/assets/${index + 1}.jpg`}
-                    onChange={() => onImageChange(`/src/assets/${index + 1}.jpg`)}
+                    checked={selectedImage === `/assets/${index + 1}.jpg`}
+                    onChange={() => onImageChange(`/assets/${index + 1}.jpg`)}
                     className="absolute top-2 left-2 accent-blue-500"
                   />
                   <img
-                    src={`/src/assets/${index + 1}.jpg`}
+                    src={`/assets/${index + 1}.jpg`}
                     alt={image.name}
                     className="w-full h-16 object-cover rounded mb-1"
                     onError={e => { e.target.style.display = 'none'; }}

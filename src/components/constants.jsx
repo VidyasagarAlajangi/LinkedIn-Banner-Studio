@@ -10,21 +10,21 @@ export const gradients = [
 ];
 
 export const assetImages = [
-  { name: 'Abstract Geometric', url: '/api/placeholder/800/400' },
-  { name: 'Mountain Sunset', url: '/api/placeholder/800/400' },
-  { name: 'Ocean Waves', url: '/api/placeholder/800/400' },
-  { name: 'City Lights', url: '/api/placeholder/800/400' },
-  { name: 'Forest Path', url: '/api/placeholder/800/400' },
-  { name: 'Space Galaxy', url: '/api/placeholder/800/400' },
-  { name: 'Desert Dunes', url: '/api/placeholder/800/400' },
-  { name: 'Minimalist Shapes', url: '/api/placeholder/800/400' },
-  { name: 'Vintage Paper', url: '/api/placeholder/800/400' },
-  { name: 'Bokeh Lights', url: '/api/placeholder/800/400' },
-  { name: 'Neon Lights', url: '/api/placeholder/800/400' },
-  { name: 'Marble Texture', url: '/api/placeholder/800/400' },
-  { name: 'Watercolor', url: '/api/placeholder/800/400' },
-  { name: 'Concrete Wall', url: '/api/placeholder/800/400' },
-  { name: 'Wood Grain', url: '/api/placeholder/800/400' },
+  { name: 'Abstract Geometric', url: '/assets/1.jpg' },
+  { name: 'Mountain Sunset', url: '/assets/2.jpg' },
+  { name: 'Ocean Waves', url: '/assets/3.jpg' },
+  { name: 'City Lights', url: '/assets/4.jpg' },
+  { name: 'Forest Path', url: '/assets/5.jpg' },
+  { name: 'Space Galaxy', url: '/assets/6.jpg' },
+  { name: 'Desert Dunes', url: '/assets/7.jpg' },
+  { name: 'Minimalist Shapes', url: '/assets/8.jpg' },
+  { name: 'Vintage Paper', url: '/assets/9.jpg' },
+  { name: 'Bokeh Lights', url: '/assets/10.jpg' },
+  { name: 'Neon Lights', url: '/assets/11.jpg' },
+  { name: 'Marble Texture', url: '/assets/12.jpg' },
+  { name: 'Watercolor', url: '/assets/13.jpg' },
+  { name: 'Concrete Wall', url: '/assets/14.jpg' },
+  { name: 'Wood Grain', url: '/assets/15.jpg' },
 ];
 
 export const fonts = [
