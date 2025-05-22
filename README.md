@@ -1,8 +1,6 @@
 # LinkedIn Banner Studio
 
-[![Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/VidyasagarAlajangi/LinkedIn-Banner-Studio)
-
-**Live Demo:** [https://linkedin-banner-studio.vercel.app/](https://linkedin-banner-studio.vercel.app/)
+**Live Demo:** ([https://linkedin-banner-studio.vercel.app/](https://linked-in-banner-studio-4vf7mbycq.vercel.app/))
 
 Create beautiful, professional LinkedIn banners with custom backgrounds, gradients, fonts, and layouts. Instantly preview and download your design!
 
