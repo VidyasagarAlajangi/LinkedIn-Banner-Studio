@@ -31,6 +31,7 @@ const QuoteBannerStudio = () => {
   
   const [customImageUrl, setCustomImageUrl] = useState('');
   const [author, setAuthor] = useState("");
+  const [showQuoteSection, setShowQuoteSection] = useState(false);
 
   const updateConfig = (updates) => {
     setConfig(prev => ({ ...prev, ...updates }));
@@ -51,8 +52,8 @@ const QuoteBannerStudio = () => {
   };
 
   const handleDownload = useCallback(async () => {
-    await downloadBanner(canvasRef, config);
-  }, [config]);
+    await downloadBanner(canvasRef, { ...config, author }); // <-- Pass author here!
+  }, [config, author]);
 
   const randomizeText = () => {
     const randomText = randomTexts[Math.floor(Math.random() * randomTexts.length)];
@@ -86,6 +87,8 @@ const QuoteBannerStudio = () => {
                 placeholder="Enter your text here..."
                 author={author}
                 onAuthorChange={setAuthor}
+                showQuoteSection={showQuoteSection}
+                setShowQuoteSection={setShowQuoteSection}
               />
             </div>
 

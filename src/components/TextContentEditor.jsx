@@ -14,10 +14,11 @@ const TextContentEditor = ({
   onTextChange,
   placeholder = "Enter your text here...",
   author = "",
-  onAuthorChange
+  onAuthorChange,
+  showQuoteSection,
+  setShowQuoteSection
 }) => {
   const theme = useTheme();
-  const [showQuoteSection, setShowQuoteSection] = useState(false);
 
   const handleRandomQuote = () => {
     const random = randomQuotes[Math.floor(Math.random() * randomQuotes.length)];
@@ -40,7 +41,10 @@ const TextContentEditor = ({
       <div className="flex items-center space-x-2">
         <button
           type="button"
-          onClick={() => setShowQuoteSection(false)}
+          onClick={() => {
+            setShowQuoteSection(false);
+            onAuthorChange(""); // Clear author when switching to Text
+          }}
           className={`px-3 py-1 rounded ${!showQuoteSection ? 'bg-blue-600 text-white' : `${theme.button} ${theme.text}`}`}
         >
           Text
@@ -87,6 +91,25 @@ const TextContentEditor = ({
         </div>
       )}
     </div>
+  );
+};
+
+const ParentComponent = () => {
+  const [config, setConfig] = useState({ text: '', author: '' });
+  const { text, author } = config;
+
+  const updateConfig = (newConfig) => {
+    setConfig((prevConfig) => ({ ...prevConfig, ...newConfig }));
+  };
+
+  return (
+    <TextContentEditor
+      text={config.text}
+      onTextChange={(text) => updateConfig({ text })}
+      placeholder="Enter your text here..."
+      author={author}
+      onAuthorChange={(author) => updateConfig({ author })}
+    />
   );
 };
 

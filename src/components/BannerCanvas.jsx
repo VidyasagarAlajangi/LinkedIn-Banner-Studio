@@ -56,7 +56,13 @@ const BannerCanvas = React.forwardRef(({ config }, ref) => {
               opacity: 0.8,
               textShadow: config.backgroundType === 'image' ? '1px 1px 3px rgba(0,0,0,0.5)' : 'none',
               fontStyle: 'italic',
-              textAlign: config.template?.style?.textAlign || 'center',
+              textAlign: config.template?.style?.textAlign || 'center', // <-- this line
+              alignSelf:
+                config.template?.style?.textAlign === 'left'
+                  ? 'flex-start'
+                  : config.template?.style?.textAlign === 'right'
+                  ? 'flex-end'
+                  : 'center', // <-- this line for flex alignment
               maxWidth: '90%'
             }}
             className="block"
@@ -72,3 +78,4 @@ const BannerCanvas = React.forwardRef(({ config }, ref) => {
 BannerCanvas.displayName = 'BannerCanvas';
 
 export default BannerCanvas;
+
