@@ -19,8 +19,8 @@ const BannerCanvas = React.forwardRef(({ config }, ref) => {
     ...getBackgroundStyle(),
     fontFamily: config.fontFamily,
     color: config.textColor,
-    width: '800px',
-    height: '400px',
+    width: '1584px', // updated
+    height: '396px', // updated
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',

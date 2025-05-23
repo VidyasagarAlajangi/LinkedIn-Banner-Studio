@@ -5,8 +5,8 @@ export const downloadBanner = async (canvasRef, config) => {
     // Create a canvas element
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = 800;
-    canvas.height = 400;
+    canvas.width = 1584; // updated
+    canvas.height = 396; // updated
 
     // Get the banner element
     const bannerElement = canvasRef.current;
@@ -14,7 +14,7 @@ export const downloadBanner = async (canvasRef, config) => {
 
     // Fill background
     if (config.backgroundType === 'gradient') {
-      const gradient = ctx.createLinearGradient(0, 0, 800, 400);
+      const gradient = ctx.createLinearGradient(0, 0, 1584, 396); // updated
       // Simple gradient approximation - you can enhance this
       gradient.addColorStop(0, '#667eea');
       gradient.addColorStop(1, '#764ba2');
@@ -25,16 +25,17 @@ export const downloadBanner = async (canvasRef, config) => {
     } else {
       ctx.fillStyle = '#667eea';
     }
-    ctx.fillRect(0, 0, 800, 400);
+    ctx.fillRect(0, 0, 1584, 396);
 
     // Add text
     ctx.fillStyle = config.textColor;
     ctx.font = `${config.fontWeight} ${config.fontSize}px ${config.fontFamily}`;
     ctx.textAlign = config.template?.style?.textAlign || 'center';
     
+    // Text positioning
     const x = config.template?.style?.textAlign === 'left' ? 60 : 
-              config.template?.style?.textAlign === 'right' ? 740 : 400;
-    const y = 200;
+              config.template?.style?.textAlign === 'right' ? 1584 - 60 : 1584 / 2; // updated
+    const y = 396 / 2; // updated
     
     // Word wrap
     const words = config.text.split(' ');
@@ -44,7 +45,7 @@ export const downloadBanner = async (canvasRef, config) => {
     for (let i = 1; i < words.length; i++) {
       const word = words[i];
       const width = ctx.measureText(currentLine + " " + word).width;
-      if (width < 700) {
+      if (width < 1500) { // updated for larger width
         currentLine += " " + word;
       } else {
         lines.push(currentLine);
