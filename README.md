@@ -101,7 +101,3 @@ Created by [VidyaSagar Alajangi](https://www.linkedin.com/in/vidyasagaralajangi/
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
->>>>>>> 2a45ae7ef921adbf2b3dcab58b53e2a5f8a002ef
